@@ -64,12 +64,13 @@ function showWinner(winner){
     else{
         msg.innerHTML= `Congratulations the Winner is ${winner}`;
     }
-
     winMsg.classList.remove("hide");
     boxes.forEach(box => box.classList.add('disabled'));
+    return;
 }
 
 function resetGame(){
+    won=false;
     turnX=true;
     boxes.forEach(box => {
         box.classList.remove('disabled');
